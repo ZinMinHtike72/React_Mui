@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import Button from '@mui/material/Button';
+import { SettingsRounded } from '@mui/icons-material';
+import { Typography } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button variant="text">Text</Button>
+      <Button variant="contained" color='warning'>Contained</Button>
+      <Button variant="outlined" startIcon={<SettingsRounded />}>Outlined</Button>
+      <Typography variant='h6' sx={{
+        backgroundColor: 'red',
+        '&:hover': {
+          backgroundColor: 'blue'
+        },
+        width: {
+          md: '10px',
+          lg: '1px',
+        },
+        margin: 5,
+      }}>This is Typo Test</Typography>
     </div>
+
   );
 }
 
